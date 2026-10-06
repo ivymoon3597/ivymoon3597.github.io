@@ -4,46 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ivy | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #faf8f5; --card: #fff; --text: #1f2328; --muted: #5c6370; --accent: #c8102e; --soft: #fbe9ec; --line: #e7e2dc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+    nav { position: sticky; top: 0; background: rgba(250,248,245,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); z-index: 10; }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .logo { font-family: "Fraunces", serif; font-size: 1.4rem; color: var(--text); text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+
+    header { padding: 70px 0 60px; display: flex; align-items: center; gap: 36px; }
+    .headshot { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.08); flex-shrink: 0; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+    h1 { font-family: "Fraunces", serif; font-size: clamp(2.3rem, 6vw, 3.4rem); line-height: 1.1; margin: 8px 0 14px; }
+    .statement { font-size: 1.1rem; color: var(--muted); }
+
+    section { padding: 55px 0; border-top: 1px solid var(--line); }
+    h2 { font-family: "Fraunces", serif; font-size: 1.8rem; margin-bottom: 24px; }
+
+    .skills { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+    .skills li { background: var(--soft); color: var(--accent); padding: 8px 15px; border-radius: 999px; font-weight: 500; font-size: 0.95rem; }
+
+    .project { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+    .project:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .tag { font-size: 0.78rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
+    .project h3 { font-size: 1.15rem; margin: 6px 0 8px; }
+    .project p { color: var(--muted); margin-bottom: 12px; }
+    .project a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .project a:hover { text-decoration: underline; }
+
+    footer { padding: 34px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; text-align: center; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; gap: 20px; padding: 50px 0 45px; }
+      nav ul { gap: 14px; }
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Ivy</h1>
+  <nav>
+    <div class="wrap">
+      <a href="#top" class="logo">Ivy</a>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Personal Statement -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm an adventure-loving, globally minded Supply Chain Management student at Rutgers who connects consumer trends with how products reach people around the world.</p>
-  </section>
+  <div class="wrap">
+    <header id="top">
+      <img src="headshot.jpg" alt="Ivy" class="headshot">
+      <div>
+        <p class="eyebrow">Supply Chain Management · Rutgers University</p>
+        <h1>Hi, I'm Ivy.</h1>
+        <p class="statement">I'm an adventure-loving, globally minded Supply Chain Management student at Rutgers who connects consumer trends with how products reach people around the world.</p>
+      </div>
+    </header>
+  </div>
 
-  <!-- Skills -->
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Market Research &amp; Consumer Trend Analysis</li>
-      <li>Event Promotion &amp; Social Media Marketing</li>
-      <li>Presentation &amp; Public Speaking</li>
-      <li>Statistics &amp; Data Analysis</li>
-      <li>Bilingual: Korean &amp; English</li>
-      <li>Cross-Cultural Communication &amp; Adaptability</li>
-    </ul>
+    <div class="wrap">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Market Research</li>
+        <li>Consumer Trend Analysis</li>
+        <li>Event Promotion</li>
+        <li>Social Media Marketing</li>
+        <li>Presentation &amp; Public Speaking</li>
+        <li>Statistics &amp; Data Analysis</li>
+        <li>Korean &amp; English (Bilingual)</li>
+        <li>Cross-Cultural Communication</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
-    <h2>Projects</h2>
+    <div class="wrap">
+      <h2>Projects</h2>
 
-    <h3>The "Super Shoe" Boom: Marathons and the Running Shoe Market</h3>
-    <p>Class presentation analyzing how the rising popularity of marathons is driving demand for high-performance "super shoes," using Adidas as a case study of how brands target runners. Inspired by my own marathon training.</p>
-    <a href="running-shoe-market.pdf">View the presentation</a>
+      <div class="project">
+        <span class="tag">Market Research</span>
+        <h3>How Is the Marathon Boom Changing the Running Shoe Market?</h3>
+        <p>Research presentation on how rising marathon participation is reshaping the running shoe industry through market growth, carbon-plated "super shoe" technology, and social media marketing. Includes a case study of Adidas' limited-release Adizero Adios Pro Evo 1 as an example of scarcity marketing.</p>
+        <a href="running-shoe-market.pdf">View the presentation →</a>
+      </div>
 
-    <h3>Korean Student Association: Marketing E-Board</h3>
-    <p>Served one year on the Rutgers KSA executive board in a marketing role, promoting club events and connecting with students from different cultures through collaborations with other organizations.</p>
-    <a href="https://www.instagram.com/">See our events</a>
+      <div class="project">
+        <span class="tag">Leadership · Marketing</span>
+        <h3>Korean Student Association: Marketing E-Board</h3>
+        <p>Served one year on the Rutgers KSA executive board in a marketing role, promoting club events and connecting with students from different cultures.</p>
+        <a href="https://www.instagram.com/rutgers_kisa">See our events →</a>
+      </div>
 
-    <h3>Personal Portfolio Website</h3>
-    <p>Built this site with HTML using AI-assisted development, then set up the repository and deployed it with GitHub Pages.</p>
-    <a href="https://github.com/ivymoon3597/ivymoon3597.github.io">View the code</a>
+      <div class="project">
+        <span class="tag">Web</span>
+        <h3>Personal Portfolio Website</h3>
+        <p>Built this site with HTML and CSS using AI-assisted development and deployed it on GitHub Pages.</p>
+        <a href="https://github.com/ivymoon3597/ivymoon3597.github.io">View the code →</a>
+      </div>
+    </div>
   </section>
+
+  <footer>Radiate positivity ✦ © 2026 Ivy</footer>
 
 </body>
 </html>
